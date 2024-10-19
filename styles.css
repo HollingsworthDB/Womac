@@ -11,6 +11,7 @@ body {
     color: #333;
     background-color: #f4f4f4;
     line-height: 1.6;
+    text-align: center; /* Center all text */
 }
 
 /* Header Styles */
@@ -20,7 +21,6 @@ header {
     background-position: center;
     color: #fff;
     padding: 60px 0;
-    text-align: center;
 }
 
 header .header-container {
@@ -41,17 +41,18 @@ header .header-container p {
 /* Navigation Styles */
 nav {
     background-color: #333;
+    display: flex;
+    justify-content: center; /* Center the navigation menu */
 }
 
 nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     list-style: none;
+    position: relative;
 }
 
 nav ul li {
-    margin: 0;
+    display: inline-block;
+    position: relative;
 }
 
 nav ul li a {
@@ -66,6 +67,36 @@ nav ul li a.active {
     background-color: #555;
 }
 
+/* Dropdown Menu */
+nav ul li:hover > ul {
+    display: block;
+}
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    min-width: 150px;
+    text-align: left;
+    z-index: 1000;
+}
+
+nav ul ul li {
+    display: block;
+}
+
+nav ul ul li a {
+    padding: 10px 15px;
+    color: #fff;
+}
+
+nav ul ul li a:hover {
+    background-color: #555;
+}
+
 /* Container */
 .container {
     width: 90%;
@@ -75,7 +106,6 @@ nav ul li a.active {
 
 /* Hero Section */
 .hero {
-    text-align: center;
     padding: 40px 0;
 }
 
@@ -101,16 +131,8 @@ nav ul li a.active {
     padding: 40px;
     margin: 20px 0;
     border-radius: 10px;
-}
-
-.about h3 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-.about p {
-    font-size: 1em;
-    line-height: 1.8;
+    display: inline-block;
+    text-align: left;
 }
 
 /* Highlights Section */
@@ -120,7 +142,6 @@ nav ul li a.active {
 
 .highlights h3 {
     font-size: 2em;
-    text-align: center;
     margin-bottom: 30px;
 }
 
@@ -146,10 +167,10 @@ nav ul li a.active {
 }
 
 .gallery-item p {
-    text-align: center;
     font-size: 0.9em;
 }
 
+/* Button */
 .btn {
     display: inline-block;
     margin: 30px auto;
@@ -159,7 +180,6 @@ nav ul li a.active {
     text-decoration: none;
     border-radius: 5px;
     font-size: 1em;
-    text-align: center;
 }
 
 .btn:hover {
@@ -171,89 +191,9 @@ footer {
     background-color: #333;
     color: #fff;
     padding: 20px 0;
-    text-align: center;
     font-size: 0.9em;
 }
 
 /* Responsive Design */
 
-/* Large screens */
-@media (max-width: 1200px) {
-    .gallery-item {
-        width: calc(50% - 40px);
-    }
-}
-
-/* Medium screens */
-@media (max-width: 768px) {
-    header {
-        padding: 40px 0;
-    }
-
-    header .header-container h1 {
-        font-size: 2.5em;
-    }
-
-    header .header-container p {
-        font-size: 1.2em;
-    }
-
-    .hero h2 {
-        font-size: 2em;
-    }
-
-    .hero p {
-        font-size: 1em;
-    }
-
-    .about h3,
-    .highlights h3 {
-        font-size: 1.8em;
-    }
-
-    .gallery-item {
-        width: calc(50% - 40px);
-    }
-}
-
-/* Small screens */
-@media (max-width: 500px) {
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li a {
-        text-align: center;
-        border-top: 1px solid #444;
-    }
-
-    .gallery-item {
-        width: 100%;
-    }
-
-    header .header-container h1 {
-        font-size: 2em;
-    }
-
-    header .header-container p {
-        font-size: 1em;
-    }
-
-    .hero h2 {
-        font-size: 1.5em;
-    }
-
-    .hero p {
-        font-size: 0.9em;
-    }
-
-    .about,
-    .highlights {
-        padding: 20px;
-    }
-
-    .about h3,
-    .highlights h3 {
-        font-size: 1.5em;
-    }
-}
+/* ... (Keep your existing responsive styles here) ... */

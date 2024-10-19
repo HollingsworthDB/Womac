@@ -2,44 +2,64 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Week One Progress</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1 Progress - Womac Project</title>
     <link rel="stylesheet" href="styles.css">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Include Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
     <header>
-        <h1>Week One Progress</h1>
+        <div class="header-container">
+            <h1>Week 1 Progress</h1>
+            <p>Womac Project - Beau Lac Lane</p>
+        </div>
     </header>
 
     <!-- Navigation Menu -->
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="week1.html">Week One</a></li>
-            <li><a href="week2.html">Week Two</a></li>
-            <!-- Add links to other weeks -->
+            <li>
+                <a href="#">Weeks &#9662;</a>
+                <ul>
+                    <li><a href="week1.html" class="active">Week 1</a></li>
+                    <li><a href="week2.html">Week 2</a></li>
+                    <li><a href="week3.html">Week 3</a></li>
+                    <!-- Add more weeks as needed -->
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
     <!-- Main Content -->
     <div class="container">
-        <main>
-            <h2>Highlights of Week One</h2>
+        <section class="about">
+            <h3>Highlights of Week 1</h3>
             <p>Describe the progress made during week one here.</p>
+        </section>
 
-            <!-- Image Gallery -->
+        <!-- Image Gallery -->
+        <section class="highlights">
             <div class="gallery">
-                <img src="Images/pic.JPEG" alt="Week One Photo 1">
-               
+                <div class="gallery-item">
+                    <img src="Images/pic.JPEG" alt="Week 1 Photo 1">
+                    <p>Site preparation begins.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/week1_photo2.jpg" alt="Week 1 Photo 2">
+                    <p>Initial groundwork completed.</p>
+                </div>
                 <!-- Add more images as needed -->
             </div>
-        </main>
+        </section>
     </div>
 
     <!-- Footer -->
     <footer>
-        &copy; 2023 Your Name or Company
+        <p>&copy; 2023 Womac Project. All rights reserved.</p>
     </footer>
 </body>
 </html>
