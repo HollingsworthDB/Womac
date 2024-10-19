@@ -1,41 +1,40 @@
-/* Reset some default browser styles for consistency */
+/* Reset Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body styling */
+/* Body and Fonts */
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Montserrat', Arial, sans-serif;
     color: #333;
-    background-color: #f8f9fa;
+    background-color: #f4f4f4;
     line-height: 1.6;
 }
 
-/* Container to center content and set a max width */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Header styling */
+/* Header Styles */
 header {
-    background-color: #343a40;
+    background-image: url('images/header-background.jpg'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
     color: #fff;
-    padding: 20px 0;
-}
-
-header h1 {
+    padding: 60px 0;
     text-align: center;
-    font-size: 2.5em;
 }
 
-/* Navigation menu */
+header .header-container h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+header .header-container p {
+    font-size: 1.5em;
+}
+
+/* Navigation Styles */
 nav {
-    background-color: #495057;
+    background-color: #333;
 }
 
 nav ul {
@@ -53,77 +52,148 @@ nav ul li a {
     padding: 15px 20px;
     color: #fff;
     text-decoration: none;
-    font-weight: bold;
 }
 
-nav ul li a:hover {
-    background-color: #343a40;
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #555;
 }
 
-/* Main content styling */
-main {
-    margin: 20px 0;
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
 }
 
-main h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 40px 0;
 }
 
-main p {
+.hero h2 {
+    font-size: 2.5em;
     margin-bottom: 20px;
 }
 
-/* Image gallery */
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.hero img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* About Section */
+.about {
+    background-color: #fff;
+    padding: 40px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.about h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1em;
+    line-height: 1.8;
+}
+
+/* Highlights Section */
+.highlights {
+    padding: 40px 0;
+}
+
+.highlights h3 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
 .gallery {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
 }
 
-.gallery img {
-    width: 100%;
-    max-width: 300px;
+.gallery-item {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    width: calc(33% - 40px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.gallery-item img {
+    max-width: 100%;
     border-radius: 5px;
-    transition: transform 0.3s;
+    margin-bottom: 10px;
 }
 
-.gallery img:hover {
-    transform: scale(1.05);
-}
-
-/* Footer styling */
-footer {
-    background-color: #343a40;
-    color: #fff;
-    padding: 10px 0;
+.gallery-item p {
     text-align: center;
     font-size: 0.9em;
 }
 
-/* Links */
-a {
-    color: #007bff;
+.btn {
+    display: inline-block;
+    margin: 30px auto;
+    padding: 15px 30px;
+    background-color: #333;
+    color: #fff;
     text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    text-align: center;
 }
 
-a:hover {
-    text-decoration: underline;
+.btn:hover {
+    background-color: #555;
 }
 
-/* Responsive design */
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
+    header .header-container h1 {
+        font-size: 2.5em;
+    }
+
+    header .header-container p {
+        font-size: 1.2em;
+    }
+
+    .gallery-item {
+        width: calc(50% - 40px);
+    }
+}
+
+@media (max-width: 500px) {
     nav ul {
         flex-direction: column;
     }
 
     nav ul li a {
         text-align: center;
-        border-top: 1px solid #6c757d;
+        border-top: 1px solid #444;
     }
 
-    .gallery {
-        flex-direction: column;
-        align-items: center;
+    .gallery-item {
+        width: 100%;
     }
 }
