@@ -8,18 +8,16 @@
 /* Body and Fonts */
 body {
     font-family: 'Montserrat', Arial, sans-serif;
-    color: #333;
-    background-color: #f4f4f4;
+    color: #000000; /* Black text color */
+    background-color: #ffffff; /* White background color */
     line-height: 1.6;
     text-align: center; /* Center all text */
 }
 
 /* Header Styles */
 header {
-    background-image: url('images/header-background.jpg'); /* Replace with your image */
-    background-size: cover;
-    background-position: center;
-    color: #fff;
+    background-color: #ffcccc; /* Light red background */
+    color: #000000; /* Black text color */
     padding: 60px 0;
 }
 
@@ -40,9 +38,9 @@ header .header-container p {
 
 /* Navigation Styles */
 nav {
-    background-color: #333;
+    background-color: #000000; /* Black background for nav */
     display: flex;
-    justify-content: center; /* Center the navigation menu */
+    justify-content: center;
 }
 
 nav ul {
@@ -58,13 +56,14 @@ nav ul li {
 nav ul li a {
     display: block;
     padding: 15px 20px;
-    color: #fff;
+    color: #ffffff; /* White text color for nav links */
     text-decoration: none;
 }
 
 nav ul li a:hover,
 nav ul li a.active {
-    background-color: #555;
+    background-color: #ffcccc; /* Light red hover effect */
+    color: #000000; /* Black text on hover */
 }
 
 /* Dropdown Menu */
@@ -75,7 +74,7 @@ nav ul li:hover > ul {
 nav ul ul {
     display: none;
     position: absolute;
-    background-color: #333;
+    background-color: #000000; /* Black background for dropdown */
     padding: 0;
     margin: 0;
     list-style: none;
@@ -90,11 +89,12 @@ nav ul ul li {
 
 nav ul ul li a {
     padding: 10px 15px;
-    color: #fff;
+    color: #ffffff; /* White text in dropdown */
 }
 
 nav ul ul li a:hover {
-    background-color: #555;
+    background-color: #ffcccc; /* Light red hover effect */
+    color: #000000; /* Black text on hover */
 }
 
 /* Container */
@@ -127,12 +127,13 @@ nav ul ul li a:hover {
 
 /* About Section */
 .about {
-    background-color: #fff;
+    background-color: #ffffff; /* White background */
     padding: 40px;
     margin: 20px 0;
     border-radius: 10px;
     display: inline-block;
     text-align: left;
+    color: #000000; /* Black text */
 }
 
 /* Highlights Section */
@@ -153,8 +154,9 @@ nav ul ul li a:hover {
 }
 
 .gallery-item {
-    background-color: #fff;
+    background-color: #ffffff; /* White background */
     padding: 10px;
+    border: 1px solid #000000; /* Black border */
     border-radius: 10px;
     width: calc(33.333% - 40px);
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -168,6 +170,7 @@ nav ul ul li a:hover {
 
 .gallery-item p {
     font-size: 0.9em;
+    color: #000000; /* Black text */
 }
 
 /* Button */
@@ -175,25 +178,117 @@ nav ul ul li a:hover {
     display: inline-block;
     margin: 30px auto;
     padding: 15px 30px;
-    background-color: #333;
-    color: #fff;
+    background-color: #ffcccc; /* Light red background */
+    color: #000000; /* Black text */
     text-decoration: none;
     border-radius: 5px;
     font-size: 1em;
+    border: 1px solid #000000; /* Black border */
 }
 
 .btn:hover {
-    background-color: #555;
+    background-color: #ffe6e6; /* Lighter red on hover */
 }
 
 /* Footer Styles */
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text */
     padding: 20px 0;
     font-size: 0.9em;
 }
 
 /* Responsive Design */
 
-/* ... (Keep your existing responsive styles here) ... */
+/* Large screens */
+@media (max-width: 1200px) {
+    .gallery-item {
+        width: calc(50% - 40px);
+    }
+}
+
+/* Medium screens */
+@media (max-width: 768px) {
+    header {
+        padding: 40px 0;
+    }
+
+    header .header-container h1 {
+        font-size: 2.5em;
+    }
+
+    header .header-container p {
+        font-size: 1.2em;
+    }
+
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .about h3,
+    .highlights h3 {
+        font-size: 1.8em;
+    }
+
+    .gallery-item {
+        width: calc(50% - 40px);
+    }
+}
+
+/* Small screens */
+@media (max-width: 500px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        display: block;
+    }
+
+    nav ul li a {
+        text-align: center;
+        border-top: 1px solid #444;
+    }
+
+    nav ul ul {
+        position: static;
+    }
+
+    nav ul ul li a {
+        padding-left: 0;
+    }
+
+    .gallery-item {
+        width: 100%;
+    }
+
+    header .header-container h1 {
+        font-size: 2em;
+    }
+
+    header .header-container p {
+        font-size: 1em;
+    }
+
+    .hero h2 {
+        font-size: 1.5em;
+    }
+
+    .hero p {
+        font-size: 0.9em;
+    }
+
+    .about,
+    .highlights {
+        padding: 20px;
+    }
+
+    .about h3,
+    .highlights h3 {
+        font-size: 1.5em;
+    }
+}
