@@ -23,6 +23,12 @@ header {
     text-align: center;
 }
 
+header .header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 header .header-container h1 {
     font-size: 3em;
     margin-bottom: 10px;
@@ -39,6 +45,7 @@ nav {
 
 nav ul {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     list-style: none;
 }
@@ -128,7 +135,7 @@ nav ul li a.active {
     background-color: #fff;
     padding: 10px;
     border-radius: 10px;
-    width: calc(33% - 40px);
+    width: calc(33.333% - 40px);
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
@@ -169,7 +176,20 @@ footer {
 }
 
 /* Responsive Design */
+
+/* Large screens */
+@media (max-width: 1200px) {
+    .gallery-item {
+        width: calc(50% - 40px);
+    }
+}
+
+/* Medium screens */
 @media (max-width: 768px) {
+    header {
+        padding: 40px 0;
+    }
+
     header .header-container h1 {
         font-size: 2.5em;
     }
@@ -178,11 +198,25 @@ footer {
         font-size: 1.2em;
     }
 
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .about h3,
+    .highlights h3 {
+        font-size: 1.8em;
+    }
+
     .gallery-item {
         width: calc(50% - 40px);
     }
 }
 
+/* Small screens */
 @media (max-width: 500px) {
     nav ul {
         flex-direction: column;
@@ -195,5 +229,31 @@ footer {
 
     .gallery-item {
         width: 100%;
+    }
+
+    header .header-container h1 {
+        font-size: 2em;
+    }
+
+    header .header-container p {
+        font-size: 1em;
+    }
+
+    .hero h2 {
+        font-size: 1.5em;
+    }
+
+    .hero p {
+        font-size: 0.9em;
+    }
+
+    .about,
+    .highlights {
+        padding: 20px;
+    }
+
+    .about h3,
+    .highlights h3 {
+        font-size: 1.5em;
     }
 }
