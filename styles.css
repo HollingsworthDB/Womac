@@ -149,6 +149,17 @@ nav ul ul.dropdown li a:hover {
     color: #000000; /* Black text */
 }
 
+/* Styling for Lists in the About Section */
+.about ul {
+    list-style-type: disc;
+    padding-left: 40px;
+    text-align: left;
+}
+
+.about ul li {
+    margin-bottom: 10px;
+}
+
 /* Highlights Section */
 .highlights {
     padding: 40px 0;
@@ -257,6 +268,7 @@ footer {
 @media (max-width: 1200px) {
     .gallery-item {
         width: calc(50% - 40px);
+    }
 }
 
 /* Medium screens */
